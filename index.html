@@ -5,27 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <div class="flex-c">
 
-    <div class="student">
-        <h1>Scheda Studente</h1>
-        <ul id="student-info">
-        </ul>
+        <div class="student ptb-15">
+            <h1>Scheda Studente</h1>
+            <ul id="student-info">
+            </ul>
+        </div>
+
+        <div class="student-list ptb-15 flex-c">
+            <h2>Lista Studenti</h2>
+            <ul id="student-list">
+            </ul>
+            <p id="newStudent" class="ptb-15"></p>
+            <div id="add" class="ptb-15"> Add new Student</div>
+        </div>
+
+
     </div>
-
-    <div class="student-list">
-        <h2>Lista Studenti</h2>
-        <ul id="student-list">
-        </ul>
-        <p id="newStudent" class="mt-15"></p>
-        <button id="add" class="mt-15"> Add new Student</button>
-    </div>
-
-
 
     <script src="./js/function.js"></script>
     <script src="./js/script.js"></script>

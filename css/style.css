@@ -4,14 +4,48 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 /* UTILS */
 
-mt-15 {
-    margin-top: 15px;
+.flex-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ptb-15 {
+    padding: 15px 0;
 }
 
 body {
     padding: 30px;
+    font-family: 'Zen Loop', cursive;
+    font-size: 1.6rem;
+}
+
+.student-list, .student {
+    background: cadetblue;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px dotted black;
+}
+
+.student-list ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+#add {
+    padding: 20px 5px;
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 200px;
+    cursor: pointer;
+}
+
+#add:hover {
+    background-color: white;
+    color: black;
 }
