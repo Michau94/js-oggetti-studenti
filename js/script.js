@@ -10,4 +10,27 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 */
 
+//! Es 1 
+
+// creazione oggetto studente contente 3 proprietà (nome cognome ed età)
+
+var studente = {
+    name: 'Michau',
+    lastname: 'Wadowski',
+    age: '26'
+}
+
+
+//stampa di tutte proprietà di oggetto studente in console
+
+for (var key in studente) {
+    console.log(key + ' : ' + studente[key]);
+}
+
+
+//TODO stampa su schermo del for (usare variabile di appoggio per raccogliere stampe in <li>)
+
+
+
+//! ES 2 
 
