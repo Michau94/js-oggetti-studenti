@@ -34,3 +34,12 @@ function listUpdate() {
     // stampa lista studenti
     displayNameLastname.innerHTML = studentList;
 }
+
+
+// reset
+
+function resetValues() {
+    nameField.value = ' ';
+    lastNameField.value = ' ';
+    ageField.value = ' ';
+}

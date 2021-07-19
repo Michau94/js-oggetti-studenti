@@ -122,18 +122,21 @@ addBonus.addEventListener('click', function () {
 
     if (!isNameValid(nameValue)) {
         alert('nome Non valido');
+        nameField.value = ' ';
     }
 
 
     var lastNameValue = lastNameField.value;
     if (!isNameValid(lastNameValue)) {
         alert('Cognome Non valido');
+        lastNameField.value = ' ';
     }
 
 
     var ageValue = ageField.value;
     if (!isAgeValid(ageValue)) {
         alert('Età non valida!');
+        ageField.value = ' ';
 
     }
 
@@ -158,20 +161,21 @@ addBonus.addEventListener('click', function () {
         students.push(newStudent);
         alert('Studente Aggiunto con Successo');
 
+        // reset campi inserimento
+
+        resetValues();
+
+        // display nuovo studente
+        displayNewStudent.innerText = 'Benvenuto, ' + newStudentFullName;
+
     } else {
 
         alert('errore, riprovare');
     }
 
 
-    // reset campi inserimento
-    nameField.innerText = '';
-    lastNameField.innerText = '';
-    ageField.innerText = '';
 
 
-    // display nuovo studente
-    displayNewStudent.innerText = 'Benvenuto, ' + newStudentFullName;
 
     // lista studenti aggiornata
     listUpdate();
