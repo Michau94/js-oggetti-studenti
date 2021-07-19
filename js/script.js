@@ -12,6 +12,9 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 //! Es 1 
 
+//DISPLAY
+var studentInfoDisplay = document.getElementById('student-info');
+
 // creazione oggetto studente contente 3 proprietà (nome cognome ed età)
 
 var studente = {
@@ -22,13 +25,14 @@ var studente = {
 
 
 //stampa di tutte proprietà di oggetto studente in console
-
+var studentDisplay = "";
 for (var key in studente) {
-    //console.log(key + ' : ' + studente[key]);
+    studentDisplay += '<li>' + key + ' : ' + studente[key] + '</li>';
+    console.log(studentDisplay);
 }
 
-
-//TODO stampa su schermo del for (usare variabile di appoggio per raccogliere stampe in <li>)
+// display in html
+studentInfoDisplay.innerHTML = studentDisplay;
 
 
 
