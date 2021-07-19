@@ -15,8 +15,15 @@
     align-items: center;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .ptb-15 {
-    padding: 15px 0;
+    padding: 15px 10px;
 }
 
 body {
@@ -37,7 +44,7 @@ body {
     padding-left: 10px;
 }
 
-#add {
+#add, #add-bonus {
     padding: 20px 5px;
     border-radius: 20px;
     border: 1px solid black;
@@ -45,7 +52,7 @@ body {
     cursor: pointer;
 }
 
-#add:hover {
+#add:hover, #add-bonus {
     background-color: white;
     color: black;
 }
