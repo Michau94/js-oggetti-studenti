@@ -28,14 +28,8 @@ function listUpdate() {
     for (i = 0; i < students.length; i++) {
 
         studentList += '<li>' + students[i].name + ' ' + students[i].lastname + '</li>';
-        console.log('-----------');
-        console.log('Nome:' + students[i].name);
-        console.log('Cognome:' + students[i].lastname);
-
     }
 
-    // lista studenti originale
-    console.table(students);
 
     // stampa lista studenti
     displayNameLastname.innerHTML = studentList;
