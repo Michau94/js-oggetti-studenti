@@ -80,6 +80,9 @@ for (i = 0; i < students.length; i++) {
 
 }
 
+// lista studenti originale
+console.table(students);
+
 // stampa lista studenti
 displayNameLastname.innerHTML = studentList;
 
@@ -120,8 +123,8 @@ buttonAdd.addEventListener('click', function () {
 
     // new student obj
     var newStudent = {
-        name: capitalize(newName),
-        lastname: capitalize(newLastname),
+        name: capitalize(newName.toLowerCase()),
+        lastname: capitalize(newLastname.toLowerCase()),
         age: newAge,
     }
 
@@ -138,6 +141,7 @@ buttonAdd.addEventListener('click', function () {
     displayNewStudent.innerText = 'Benvenuto, ' + newStudentFullName;
 
     // lista studenti aggiornata
+    listUpdate();
     console.table(students);
 })
 
