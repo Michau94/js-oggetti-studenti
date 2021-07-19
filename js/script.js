@@ -44,6 +44,7 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 var displayNameLastname = document.getElementById('student-list');
 var displayNewStudent = document.getElementById('newStudent');
+var buttonAdd = document.getElementById('add');
 
 // creazione array contenente 3 oggetti (studenti)
 
@@ -73,18 +74,25 @@ var studentList = "";
 for (i = 0; i < students.length; i++) {
 
     studentList += '<li>' + students[i].name + ' ' + students[i].lastname + '</li>';
-
+    console.log('-----------');
     console.log('Nome:' + students[i].name);
     console.log('Cognome:' + students[i].lastname);
+
 }
 
 // stampa lista studenti
 displayNameLastname.innerHTML = studentList;
 
+buttonAdd.addEventListener('click', function () {
 
-// New student info
-//TODO validazione campi 
-while (!isNameValid(newName) || !isNameValid(newLastname) || !isAgeValid(newAge)) {
+
+
+
+
+
+    // New student info
+
+
     var newName = prompt('Inserisci nome');
 
     while (!isNameValid(newName)) {
@@ -93,12 +101,14 @@ while (!isNameValid(newName) || !isNameValid(newLastname) || !isAgeValid(newAge)
     }
 
     var newLastname = prompt('Inserisci Cognome');
+
     while (!isNameValid(newLastname)) {
         alert('Cognome Non valido');
         newLastname = prompt('Inserisci Cognome');
     }
 
     var newAge = prompt('Inserisci Età');
+
     while (!isAgeValid(newAge)) {
         alert('Età non valida!');
         newAge = prompt('Inserisci Età');
@@ -106,24 +116,33 @@ while (!isNameValid(newName) || !isNameValid(newLastname) || !isAgeValid(newAge)
     }
 
 
-}
-
-// new student obj
-var newStudent = {
-    name: capitalize(newName),
-    lastname: capitalize(newLastname),
-    age: newAge,
-}
 
 
-var newStudentFullName = newStudent.name + ' ' + newStudent.lastname;
-console.log('Nuovo studente: ' + newStudentFullName);
+    // new student obj
+    var newStudent = {
+        name: capitalize(newName),
+        lastname: capitalize(newLastname),
+        age: newAge,
+    }
 
-// display nuovo studente
-displayNewStudent.innerText = newStudentFullName;
 
-// push to students array
-students.push(newStudent);
+    var newStudentFullName = newStudent.name + ' ' + newStudent.lastname;
+    console.log('Nuovo studente: ' + newStudentFullName);
+
+
+    // push to students array
+    students.push(newStudent);
+    alert('Studente Aggiunto con Successo')
+
+    // display nuovo studente
+    displayNewStudent.innerText = 'Benvenuto, ' + newStudentFullName;
+
+    // lista studenti aggiornata
+    console.table(students);
+})
+
+
+
 
 
 

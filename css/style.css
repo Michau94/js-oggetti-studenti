@@ -6,4 +6,12 @@
     box-sizing: border-box;
 }
 
+/* UTILS */
 
+mt-15 {
+    margin-top: 15px;
+}
+
+body {
+    padding: 30px;
+}
