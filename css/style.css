@@ -30,13 +30,16 @@ body {
     padding: 30px;
     font-family: 'Zen Loop', cursive;
     font-size: 1.6rem;
+    background-image: url(../img/blackboard.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
 }
 
 .student-list, .student {
-    background: cadetblue;
     width: 50%;
     border-radius: 20px;
-    border: 1px dotted black;
 }
 
 .student-list ul {
@@ -50,9 +53,10 @@ body {
     border: 1px solid black;
     width: 200px;
     cursor: pointer;
+    background-color: black;
 }
 
-#add:hover, #add-bonus {
+#add:hover, #add-bonus:hover {
     background-color: white;
     color: black;
 }
