@@ -2,13 +2,8 @@
 Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 Stampare a schermo(in pagina) attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 
-
-ES 2
-Creare un array di oggetti di studenti.
-Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
-Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-
 */
+
 
 //! Es 1 
 
@@ -35,6 +30,13 @@ for (var key in studente) {
 studentInfoDisplay.innerHTML = studentDisplay;
 
 
+/*
+ES 2
+Creare un array di oggetti di studenti.
+Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+*/
 
 //! ES 2 
 
@@ -82,15 +84,35 @@ displayNameLastname.innerHTML = studentList;
 
 // New student info
 //TODO validazione campi 
-var newName = prompt('Inserisci Nome');
-var newLastname = prompt('Inserisci Cognome');
-var newAge = prompt('Inserisci Età');
+while (!isNameValid(newName) || !isNameValid(newLastname) || !isAgeValid(newAge)) {
+    var newName = prompt('Inserisci nome');
+
+    while (!isNameValid(newName)) {
+        alert('nome Non valido');
+        newName = prompt('Inserisci nome');
+    }
+
+    var newLastname = prompt('Inserisci Cognome');
+    while (!isNameValid(newLastname)) {
+        alert('Cognome Non valido');
+        newLastname = prompt('Inserisci Cognome');
+    }
+
+    var newAge = prompt('Inserisci Età');
+    while (!isAgeValid(newAge)) {
+        alert('Età non valida!');
+        newAge = prompt('Inserisci Età');
+
+    }
+
+
+}
 
 // new student obj
 var newStudent = {
-    name: newName,
-    lastname: newLastname,
-    age: newAge
+    name: capitalize(newName),
+    lastname: capitalize(newLastname),
+    age: newAge,
 }
 
 
