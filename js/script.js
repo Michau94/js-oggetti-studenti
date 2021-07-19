@@ -28,7 +28,7 @@ var studente = {
 var studentDisplay = "";
 for (var key in studente) {
     studentDisplay += '<li>' + key + ' : ' + studente[key] + '</li>';
-    console.log(studentDisplay);
+    //console.log(studentDisplay);
 }
 
 // display in html
@@ -37,6 +37,11 @@ studentInfoDisplay.innerHTML = studentDisplay;
 
 
 //! ES 2 
+
+// display
+
+var displayNameLastname = document.getElementById('student-list');
+var displayNewStudent = document.getElementById('newStudent');
 
 // creazione array contenente 3 oggetti (studenti)
 
@@ -60,17 +65,20 @@ var students = [
 
 //console.log(students);
 
-//ciclo normale in array di oggetti
+//ciclo
 
+var studentList = "";
 for (i = 0; i < students.length; i++) {
-    console.log(students[i]);
 
-    //ciclo for in in oggetto
-    for (var key in students[i]) {
-        console.log(key + ': ' + students[i][key]);
+    studentList += '<li>' + students[i].name + ' ' + students[i].lastname + '</li>';
 
-    }
+    console.log('Nome:' + students[i].name);
+    console.log('Cognome:' + students[i].lastname);
 }
+
+// stampa lista studenti
+displayNameLastname.innerHTML = studentList;
+
 
 // New student info
 //TODO validazione campi 
@@ -85,11 +93,20 @@ var newStudent = {
     age: newAge
 }
 
+
+var newStudentFullName = newStudent.name + ' ' + newStudent.lastname;
+console.log('Nuovo studente: ' + newStudentFullName);
+
+// display nuovo studente
+displayNewStudent.innerText = newStudentFullName;
+
 // push to students array
 students.push(newStudent);
 
 
-console.log(students);
+
+
+
 
 
 
