@@ -24,7 +24,7 @@ var studente = {
 //stampa di tutte proprietà di oggetto studente in console
 
 for (var key in studente) {
-    console.log(key + ' : ' + studente[key]);
+    //console.log(key + ' : ' + studente[key]);
 }
 
 
@@ -33,4 +33,62 @@ for (var key in studente) {
 
 
 //! ES 2 
+
+// creazione array contenente 3 oggetti (studenti)
+
+var students = [
+    {
+        name: 'Michau',
+        lastname: 'Wadowski',
+        age: '26'
+    },
+    {
+        name: 'Marco',
+        lastname: 'Lanci',
+
+    },
+    {
+        name: 'Riccardo',
+        lastname: 'Petricca',
+
+    }
+]
+
+//console.log(students);
+
+//ciclo normale in array di oggetti
+
+for (i = 0; i < students.length; i++) {
+    console.log(students[i]);
+
+    //ciclo for in in oggetto
+    for (var key in students[i]) {
+        console.log(key + ': ' + students[i][key]);
+
+    }
+}
+
+// New student info
+//TODO validazione campi 
+var newName = prompt('Inserisci Nome');
+var newLastname = prompt('Inserisci Cognome');
+var newAge = prompt('Inserisci Età');
+
+// new student obj
+var newStudent = {
+    name: newName,
+    lastname: newLastname,
+    age: newAge
+}
+
+// push to students array
+students.push(newStudent);
+
+
+console.log(students);
+
+
+
+
+
 
